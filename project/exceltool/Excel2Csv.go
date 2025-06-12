@@ -15,10 +15,10 @@ import (
 	"github.com/xuri/excelize/v2"
 )
 
-var _addBracket = true // 是否在 arr 类型的分组括号中添加括号，true 为添加括号，false 为不添加
+var _addBracket = false // 是否在 arr 类型的分组括号中添加括号，true 为添加括号，false 为不添加
 
-// ConvertAll 批量转换目录下所有 xlsx 文件为 csv
-func ConvertAll(inputDir, outputDir string) error {
+// ConvertAll2Csv 批量转换目录下所有 xlsx 文件为 csv
+func ConvertAll2Csv(inputDir, outputDir string) error {
 	files, err := filepath.Glob(filepath.Join(inputDir, "*.xlsx"))
 	if err != nil {
 		return fmt.Errorf("查找xlsx文件失败: %w", err)
